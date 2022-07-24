@@ -14,9 +14,9 @@ echo ██║╚██╔╝██║██║   ██║██║   ██║
 echo ██║ ╚═╝ ██║╚██████╔╝╚██████╔╝███████║███████║███████╗██║  ██║╚██████╔╝       ██║   ███████╗╚██████╗██║  ██║
 echo ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝        ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝
 echo
-echo "Script to quickly setup a Manjaro environnement"
+echo "Script to quickly setup a Manjaro environment"
 echo "Made by Thomas Mousseau"
-echo 'Small but important detail, if you dont need all the softwares below, just edit the installAllSoftwares function by commenting the unwanted lines'
+echo 'If you dont need all the softwares below, just edit the installAllSoftwares function by commenting the unwanted softwares'
 
 }
 
