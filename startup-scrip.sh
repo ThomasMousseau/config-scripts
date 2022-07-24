@@ -48,16 +48,28 @@ displayOptions()
 
 installAllSoftwares()
 {
-    echo 'Since I had already installed Google and Steam when I started this project, yall gonna do without it'
+    echo 'Since I had already installed Google when I started this project, yall gonna use Firefox'
     changeZshToBash
     installVscode
     installVim
+    installLibreOffice
+    installSteam
     
 }
 
 installSomeSoftwares()
 {
     #needs an array with all the selected softwares
+}
+installSteam()
+{
+    sudo pacman -S steam-manjaro
+}
+
+installLibreOffice()
+{
+
+    sudo pacman -S libreoffice-fresh
 }
 
 installVscode()
@@ -81,17 +93,14 @@ installLeagueOfLegends()
     	
     sudo pacman -S wine winetricks
     yay -S wine-lol-glibc wine-lol ##idk why but it didnt work
+    #https://www.linuxfordevices.com/tutorials/linux/install-league-of-legends
 }
 
 changeZshToBash()
 {
-    chsh -s /bin/sh  
+    chsh -s /bin/bash
 }
 
-installPython()
-{
-
-}
 
 
 
