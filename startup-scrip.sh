@@ -49,6 +49,8 @@ displayOptions()
 installAllSoftwares()
 {
     echo 'Since I had already installed Google and Steam when I started this project, yall gonna do without it'
+    changeZshToBash
+    installVscode
     
 
 }
@@ -60,10 +62,33 @@ installSomeSoftwares()
 
 installVscode()
 {
-
+    sudo pacman -Sy
+    cd ~/Downloads
+    git clone https://AUR.archlinux.org/visual-studio-code-bin.git
+    cd visual-studio-code-bin/
+    makepkg -s
+    sudo pacman -U visual-studio-code-bin-*.pkg.tar.zst
+    cd ../ && sudo rm -rfv visual-studio-code-bin/
 }
 
 installVim()
+{
+    sudo pacman -S vim
+}
+
+installLeagueOfLegends()
+{
+    	
+    sudo pacman -S wine winetricks
+    yay -S wine-lol-glibc wine-lol ##idk why but it didnt work
+}
+
+changeZshToBash()
+{
+    chsh -s /bin/sh  
+}
+
+installPython()
 {
 
 }
