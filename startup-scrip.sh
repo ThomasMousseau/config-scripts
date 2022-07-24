@@ -51,8 +51,8 @@ installAllSoftwares()
     echo 'Since I had already installed Google and Steam when I started this project, yall gonna do without it'
     changeZshToBash
     installVscode
+    installVim
     
-
 }
 
 installSomeSoftwares()
