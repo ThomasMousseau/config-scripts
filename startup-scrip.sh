@@ -17,6 +17,7 @@ echo
 echo "Script to quickly setup a Manjaro environment"
 echo "Made by Thomas Mousseau"
 echo 'If you dont need all the softwares below, just edit the installAllSoftwares function by commenting the unwanted softwares'
+echo 'Could be important to verify if Java and Python are installed'
 
 }
 
@@ -48,18 +49,25 @@ displayOptions()
 
 installAllSoftwares()
 {
+    #install Chromium
     echo 'Since I had already installed Google when I started this project, yall gonna use Firefox'
-    changeZshToBash
     installVscode
     installVim
-    installLibreOffice
-    installSteam
-    
+    installGoAndi3
+    installZoom
+
 }
 
 installSomeSoftwares()
 {
     #needs an array with all the selected softwares
+}
+installzoom()
+{
+    sudo pacman -S git base-devel
+    git clone https://aur.archlinux.org/zoom.git
+    cd zoom
+    makepkg -si
 }
 installSteam()
 {
@@ -81,6 +89,9 @@ installVscode()
     makepkg -s
     sudo pacman -U visual-studio-code-bin-*.pkg.tar.zst
     cd ../ && sudo rm -rfv visual-studio-code-bin/
+
+    echo "Installing extensions such as Atome one dark theme, GitHub Copilot and Vim emulation" 
+    
 }
 
 installVim()
@@ -99,6 +110,12 @@ installLeagueOfLegends()
 changeZshToBash()
 {
     chsh -s /bin/bash
+}
+
+installGoAndi3()
+{
+   sudo pacman -S go
+   sudo pacman -S i3
 }
 
 
