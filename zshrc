@@ -14,8 +14,10 @@ fi
 bindkey '^[[3;2~' backward-kill-word
 
 
-plugins=(zsh-autosuggestions)
-plugins=(z zsh-autosuggestions)
+# plugins=(zsh-autosuggestions)
+# plugins=(z zsh-autosuggestions)
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export TERM="xterm-256color"
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -34,6 +36,5 @@ eval "$(pyenv init --path)"
 
 #bindkey '^[^?' backward-kill-word
 
-source ~/env.sh
 export EDITOR=vim
 export LSCOLORS='GxFxCxDxBxegedabagaced'
